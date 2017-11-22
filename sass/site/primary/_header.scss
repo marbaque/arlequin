@@ -1,0 +1,80 @@
+.site-header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    font-family: $font__sans;
+    background-color: white; //rgba(255,255,255,0.9);
+    box-shadow: (0 4px 10px rgba(0,0,0,0.25));
+    border-bottom: 1px solid $color__border;
+    z-index: 8888;
+
+    @include flex-container;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (min-width:$query__small){
+        height: 100px;
+    }
+}
+
+.site-branding{
+    width:70%;
+    order: 1;
+    text-align: center;
+    img{
+        padding: 0 2em;
+    }
+    .site-title{
+        margin: 0;
+        padding: 0;
+        font-size: 1.2em;
+        line-height: 1em;
+        font-family: $font__headings;
+
+        a{
+            color: $color__text-screen;
+            text-decoration: none;
+            &:hover,
+                &:focus{
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.main-navigation{
+    width: 10%;
+    height: 100%;
+    order: 0;
+    border-right: solid 1px $color__border;
+    @include flex-container;
+    align-items: center;
+    max-width: 100px;
+
+    .menu {
+        height: 100vh;
+        position: absolute;
+        left: 0;
+         box-shadow: 3px 0 5px rgba(0,0,0,.25);
+        overflow-x: hidden;
+        overflow-y: scroll;
+        line-height: 1.2;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
+.site-user{
+    width: 20%;
+    height: 100%;
+    border-left: solid 1px $color__border;
+    order: 2;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+
+}
+
+
+
