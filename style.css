@@ -1823,6 +1823,11 @@ li.arlequin-search, .widget_search {
 	text-decoration: none;
 }
 
+.site-branding .site-title a img {
+	width: 100%;
+	height: auto;
+}
+
 .main-navigation {
 	width: 10%;
 	height: 100%;

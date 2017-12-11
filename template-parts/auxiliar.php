@@ -23,20 +23,23 @@ $obj = get_field('objetivos');
 
         <?php if ($resumen): ?>
             <div class="auxiliar-box">
-                <a href="" title="resumen">Resumen</a>
-                <div class="resumen-text">
+                <div id="resumen-btn">
+                    <a href="" title="resumen">Resumen</a>
+                </div>
+                <div id="resumen" class="resumen-text">
                     <?php echo $resumen; ?>
                 </div>
             </div>
         <?php endif; ?>
 
         <?php if ($obj): ?>
-            <div class="auxiliar-box" id="share">
-                <a>Objetivos</a>
-            </div>
-        
-            <div class="objetivos-text" id="share-options">
-                <?php echo $obj; ?>
+            <div class="auxiliar-box">
+                <div id="obj-btn">
+                    <a>Objetivos</a>
+                </div>
+                <div class="objetivos-text" id="objetivos">
+                    <?php echo $obj; ?>
+                </div>
             </div>
         <?php endif; ?>
 

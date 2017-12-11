@@ -239,7 +239,7 @@ function arlequin_scripts() {
 
     wp_enqueue_script('arlequin-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20161215', true);
     
-    wp_enqueue_script('arlequin-navigation', get_template_directory_uri() . '/js/photo-viewer.js', array('jquery'), '20161215', true);
+    //wp_enqueue_script('arlequin-photoviewer', get_template_directory_uri() . '/js/photo-viewer.js', array('jquery'), '20161215', true);
     
     wp_localize_script('arlequin-navigation', 'arlequinScreenReaderText', array(
         'expand' => __('Expand child menu', 'arlequin'),
@@ -250,6 +250,11 @@ function arlequin_scripts() {
 
     if (is_singular() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
+    }
+    
+    if (is_singular('multimedia')) {
+        wp_enqueue_script('arlequin-modal_init', get_template_directory_uri() . '/js/modal-init.js', array('jquery'), '20171211', true);
+        wp_enqueue_script('arlequin-modal', get_template_directory_uri() . '/js/modal.js', array('jquery'), '20171211', true);
     }
 }
 
